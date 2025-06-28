@@ -1,0 +1,13 @@
+body{
+  background-color: rgb(245, 245, 245);
+  max-height: fit-content;
+}
+.right-header{
+  margin-left: 20px;
+}
+.left-header{
+  margin-right: 20px;
+}
+.bg-layer{
+  background-image: url("./assets/bg_layer.png");
+}
