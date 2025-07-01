@@ -11,6 +11,10 @@ const PORT =process.env.PORT || 3000;
 const app= express()
 await connectDB()
 
+app.get("/ping", (req, res) => {
+  res.status(200).json({ success: true, message: "Backend is alive" });
+});
+
 app.use(express.json())
 
 
@@ -21,9 +25,7 @@ app.get('/',(req,res)=>{
 })
 app.use('/api/user',userRouter)
 app.use('/api/image',imageRouter)
-app.get("/ping", (req, res) => {
-  res.status(200).json({ success: true, message: "Backend is alive" });
-});
+
 
 
 app.listen(PORT,()=>{
